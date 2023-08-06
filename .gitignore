@@ -1,0 +1,6 @@
+*.lock
+*.tsbuildinfo
+*.txt
+.env
+dist
+node_modules

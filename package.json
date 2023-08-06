@@ -1,0 +1,41 @@
+{
+  "name": "src",
+  "version": "0.1.0",
+  "description": "a data collection agent",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "watch:dev": "nodemon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/xsquaredlabs/src.git"
+  },
+  "author": "xSquaredLabs",
+  "license": "MIT",
+  "dependencies": {
+    "@discordjs/builders": "^1.4.0",
+    "@discordjs/rest": "^2.0.0",
+    "discord-api-types": "^0.37.40",
+    "discord.js": "^14.7.1",
+    "dotenv": "^16.0.3",
+    "gun": "https://github.com/amark/gun.git"
+  },
+  "devDependencies": {
+    "@types/node": "^18.17.3",
+    "editorconfig": "^2.0.0",
+    "nodemon": "^3.0.1",
+    "prettier": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src"
+    ],
+    "ext": ".ts, .json, .yml",
+    "exec": "ts-node-esm --files ./src/index.ts"
+  }
+}

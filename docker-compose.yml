@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  x:
+    image: registry.gitlab.com/xsquaredlabs/src:latest
+    command: npm run watch:dev
+    restart: always
+    user: 1000:1000
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/one/src
+      - ./env:/one/env
+      - ./package.json:/one/package.json
+      - ./tsconfig.json:/one/tsconfig.json
+    env_file:
+      - .env
