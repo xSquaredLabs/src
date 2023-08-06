@@ -11,5 +11,3 @@ trim_trailing_whitespace = true
 
 [*.{js,ts}]
 indent_size = 4
-
-
